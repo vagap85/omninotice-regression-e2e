@@ -1,0 +1,18 @@
+{
+  "name": "omninotice-e2e-demo",
+  "version": "1.0.0",
+  "description": "E2E tests for OmniNotice (API + UI) — demo for customer",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:api": "cross-env TARGET=dev playwright test --project=api --reporter=list,html",
+    "test:ui": "cross-env TARGET=dev playwright test --project=ui --reporter=list,html",
+    "test:headed": "cross-env TARGET=dev playwright test --project=ui --headed",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5"
+  }
+}
